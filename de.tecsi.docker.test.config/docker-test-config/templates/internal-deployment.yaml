@@ -33,6 +33,9 @@ spec:
         - mountPath: /logs
           name: test-mount
           subPath: logs
+        - mountPath: /hugo
+          name: test-mount
+          subPath: mysql-data
       volumes:
       - name: config
         configMap:
