@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-service
+  labels:
+    run: test-service
+spec:
+  type: LoadBalancer
+  ports:
+  - name: service-port
+    port: 8080
+    targetPort: 8080
+    protocol: TCP
+  - name: debug-port
+    port: 50506
+    targetPort: 50506
+    protocol: TCP
+  selector:
+    app: test-service
