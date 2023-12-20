@@ -29,13 +29,11 @@ spec:
         - containerPort: 50505
         volumeMounts:
         - mountPath: /config
-          name: config
-        - mountPath: /logx
+          name: test-mount
+          subPath: config
+        - mountPath: /logs
           name: test-mount
           subPath: logs
-        - mountPath: /hugo
-          name: test-mount
-          subPath: mysql-data
       volumes:
       - name: config
         configMap:
