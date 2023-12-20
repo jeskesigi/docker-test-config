@@ -30,7 +30,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: docker-test-account
-  namespace: docker-test-dev
+  namespace: {{.namespace}}
 roleRef:
   kind: ClusterRole
   name:  docker-test-cluster-role
