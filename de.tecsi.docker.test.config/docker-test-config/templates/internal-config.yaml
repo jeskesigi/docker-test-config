@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: test-internal-config
+  namespace: docker-test
+data:
+  docker-internal.config-kubernetes.value: "hugo was here."
+  
+  docker-test-internal.properties: |
+    docker-internal.config-test.value=123
