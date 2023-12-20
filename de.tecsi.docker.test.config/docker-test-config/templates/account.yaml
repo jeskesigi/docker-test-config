@@ -2,17 +2,3 @@ kind: ServiceAccount
 apiVersion: v1
 metadata:
   name: docker-test-account
-
----
-
-kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: docker-test-cluster-role-binding
-roleRef:
-  kind: ClusterRole
-  name: docker-test-cluster-role
-  apiGroup: rbac.authorization.k8s.io
-subjects:
-  - kind: ServiceAccount
-    name: docker-test-account

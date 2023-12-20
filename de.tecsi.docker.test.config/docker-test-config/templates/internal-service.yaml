@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-internal
+  labels:
+    run: test-internal
+spec:
+  type: NodePort
+  ports:
+  - name: service-port
+    port: 8081
+    nodePort: 32307
+    protocol: TCP
+  - name: debug-port
+    port: 50505
+    nodePort: 30505
+    targetPort: 50505
+    protocol: TCP
+  selector:
+    app: test-internal
