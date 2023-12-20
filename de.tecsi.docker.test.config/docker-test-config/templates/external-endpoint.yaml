@@ -1,0 +1,9 @@
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: test-external
+subsets:
+  - addresses:
+    - ip: 172.29.48.1
+    ports:
+    - port: 8082
