@@ -30,7 +30,7 @@ spec:
         volumeMounts:
         - mountPath: /config
           name: config
-        - mountPath: /logs
+        - mountPath: /logx
           name: test-mount
           subPath: logs
         - mountPath: /hugo
