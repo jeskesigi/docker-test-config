@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: test-mount-claim
 spec:
-  storageClassName: manual
+  storageClassName: hostpath
   accessModes:
   - ReadWriteMany
   resources:
