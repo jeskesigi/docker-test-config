@@ -2,7 +2,6 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: test-internal
-  namespace: docker-test
 spec:
   selector:
     matchLabels:
@@ -51,7 +50,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: test-internal
-  namespace: docker-test
   labels:
     run: test-internal
 spec:
