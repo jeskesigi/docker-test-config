@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: test-mount
+  name: {{ .Release.Namespace }}-test-mount
 spec:
   storageClassName: manual
   capacity:
