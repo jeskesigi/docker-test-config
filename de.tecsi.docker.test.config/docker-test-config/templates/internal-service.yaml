@@ -5,9 +5,9 @@ metadata:
   labels:
     run: test-internal
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-  - name: ClusterIP
+  - name: internal-port
     port: 8081
     targetPort: 8081
     protocol: TCP
