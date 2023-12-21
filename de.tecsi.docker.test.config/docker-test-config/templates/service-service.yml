@@ -5,7 +5,7 @@ metadata:
   labels:
     run: test-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: service-port
     port: 8080
