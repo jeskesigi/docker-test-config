@@ -32,12 +32,6 @@ spec:
           name: test-mount
           subPath: logs
       volumes:
-      - name: config
-        configMap:
-          name: test-internal-config
-          items:
-          - key: docker-test-internal.properties
-            path: docker-test-internal.properties
       - name: test-mount
         persistentVolumeClaim:
           claimName: test-mount-claim
