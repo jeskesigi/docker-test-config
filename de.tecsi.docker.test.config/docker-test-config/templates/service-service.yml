@@ -8,9 +8,8 @@ spec:
   type: LoadBalancer
   ports:
   - name: service-port
-    port: 8080
+    port: {{ .Values.test_service_public_port }}
     targetPort: 8080
-    nodePort: {{ .Values.test_service_public_port }}
     protocol: TCP
   selector:
     app: test-service
