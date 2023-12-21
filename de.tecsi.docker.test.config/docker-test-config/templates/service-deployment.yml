@@ -26,6 +26,8 @@ spec:
         env:
         - name: JAVA_OPTS
           value: {{ .Values.test_service_java_opts }}
+        - name: SPRING_PROFILES_ACTIVE
+          value: "kubernetes"
         - name: MYSQL_USERNAME
           valueFrom:
             secretKeyRef:
