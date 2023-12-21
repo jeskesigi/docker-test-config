@@ -15,7 +15,7 @@ spec:
       initContainers:
         - name: check-mysql
           image: busybox
-          command: ['sh', '-c', "until nslookup mysql; do echo waiting; sleep 2; done"] 
+          command: ['sh', '-c', "echo mysql.{{ .Release.Namespace }}; until nslookup mysql.{{ .Release.Namespace }}; do echo waiting; sleep 2; done"] 
       containers:
       - name: service
         image: docker.io/jeskesigi/docker-test-service:latest
