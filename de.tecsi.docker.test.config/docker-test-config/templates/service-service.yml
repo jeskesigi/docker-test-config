@@ -9,7 +9,7 @@ spec:
   ports:
   - name: service-port
     port: 8080
-    nodePort: {{ .Values.test-service-public-port }}
+    nodePort: {{ .Values.test_service_public_port }}
     targetPort: 8080
     protocol: TCP
   - name: debug-port
