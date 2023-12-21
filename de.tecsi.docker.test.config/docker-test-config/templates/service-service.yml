@@ -5,15 +5,12 @@ metadata:
   labels:
     run: test-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - name: service-port
-    port: {{ .Values.test_service_public_port }}
+    port: 8080
     targetPort: 8080
-    protocol: TCP
-  - name: debug-port
-    port: 50505
-    targetPort: 50505
+    nodePort: {{ .Values.test_service_public_port }}
     protocol: TCP
   selector:
     app: test-service

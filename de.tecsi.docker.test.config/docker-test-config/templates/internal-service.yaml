@@ -5,10 +5,12 @@ metadata:
   labels:
     run: test-internal
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - name: internal-port
     port: 8081
+    targetPort: 8081
+    nodePort: {{ .Values.test_internal_public_port }}
     protocol: TCP
   selector:
     app: test-internal

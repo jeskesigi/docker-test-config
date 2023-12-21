@@ -1,3 +1,12 @@
+	
+argocd applications
+-------------------	
+	applications
+	- docker-test-dev : values.yaml + values-dev.yaml
+	- docker-test-prod : values.yaml + values-prod.yaml
+
+	git configuration repo : https://github.com/jeskesigi/docker-test-config.git
+	path to helm deployment : de.tecsi.docker.test.config/docker-test-config
 
 test deployment
 ---------------

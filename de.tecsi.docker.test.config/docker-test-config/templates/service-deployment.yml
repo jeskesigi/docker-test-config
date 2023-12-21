@@ -22,10 +22,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        - containerPort: 50505
         env:
         - name: JAVA_OPTS
-          value: -agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n
+          value: {{ .Values.test_service_java_opts }}
         - name: MYSQL_USERNAME
           valueFrom:
             secretKeyRef:
