@@ -7,8 +7,6 @@ spec:
     matchLabels:
       app: test-internal
   replicas: 1
-  strategy:
-     type: RollingUpdate  
   template:
     metadata:
       labels:
@@ -22,11 +20,8 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: "kubernetes"
-        - name: JAVA_OPTS
-          value: -agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n
         ports:
         - containerPort: 8081
-        - containerPort: 50505
         volumeMounts:
         - mountPath: /config
           name: test-mount

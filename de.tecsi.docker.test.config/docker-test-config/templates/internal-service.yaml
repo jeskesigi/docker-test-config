@@ -5,16 +5,10 @@ metadata:
   labels:
     run: test-internal
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-  - name: service-port
+  - name: internal-port
     port: 8081
-    nodePort: 32307
-    protocol: TCP
-  - name: debug-port
-    port: 50505
-    nodePort: 30505
-    targetPort: 50505
     protocol: TCP
   selector:
     app: test-internal

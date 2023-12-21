@@ -5,17 +5,15 @@ metadata:
   labels:
     run: test-service
 spec:
-#  type: LoadBalancer
-  type: NodePort
+  type: ClusterIP
   ports:
   - name: service-port
     port: 8080
-    nodePort: 32308
     targetPort: 8080
     protocol: TCP
   - name: debug-port
-    port: 50506
-    targetPort: 50506
+    port: 50505
+    targetPort: 50505
     protocol: TCP
   selector:
     app: test-service

@@ -7,8 +7,6 @@ spec:
     matchLabels:
       app: test-service
   replicas: 1
-  strategy:
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -20,10 +18,10 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        - containerPort: 50506
+        - containerPort: 50505
         env:
         - name: JAVA_OPTS
-          value: -agentlib:jdwp=transport=dt_socket,address=*:50506,server=y,suspend=n
+          value: -agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n
         - name: MYSQL_USERNAME
           valueFrom:
             secretKeyRef:
