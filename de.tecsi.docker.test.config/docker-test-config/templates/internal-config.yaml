@@ -4,5 +4,5 @@ metadata:
   name: test-internal-config
 data:
   application.properties: |
-    docker-internal.config-test.value=123
+    docker-internal.config-test.value={{ .Values.test_internal_test_value }}
     docker-internal.config-kubernetes.value: {{ .Values.test_internal_kubernetes_value }}
