@@ -8,6 +8,3 @@ data:
   application.properties: |
     docker-internal.config-test.value=123
 
-  docker-test-internal.properties: |
-    docker-internal.config-test.value=100
-
