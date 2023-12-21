@@ -2,4 +2,4 @@ docker-internal:
   config-test:
     value: 100
   config-kubernetes:
-    value: this is from dev stage
+    value: this is from dev stage!
