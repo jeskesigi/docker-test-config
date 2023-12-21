@@ -2,9 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: test-external
+  namespace: docker-test-dev
 spec:
-  type: ClusterIP
-  ports:
-  - name: external-port
-    port: 8082
-    protocol: TCP
+  type: ExternalName
+  # see C:\Windows\System32\drivers\etc\hosts
+  externalName: msgn19818.hyperv.net
