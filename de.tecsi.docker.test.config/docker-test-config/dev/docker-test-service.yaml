@@ -8,3 +8,5 @@ docker-test-service:
     endpoint: http://test-internal:{{ .Values.test_internal_port }}
   external-api:
     endpoint: http://test-external:{{ .Values.test_external_port }}
+  other:
+    dummy: 12
