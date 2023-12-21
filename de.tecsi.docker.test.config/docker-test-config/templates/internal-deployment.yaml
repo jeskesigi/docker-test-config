@@ -23,7 +23,7 @@ spec:
         - name: SPRING_PROFILES_ACTIVE
           value: "kubernetes"
         ports:
-        - containerPort: 8081
+        - containerPort: {{ .Values.test_internal_port }}
         volumeMounts:
         - mountPath: /config
           name: test-mount

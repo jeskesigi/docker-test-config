@@ -1,2 +1,5 @@
-test_service_java_opts: ""
-test_internal_java_opts: ""
+# ports
+mysql_port: 3306
+test_service_port: 8080
+test_internal_port: 8081
+test_external_port: 8082

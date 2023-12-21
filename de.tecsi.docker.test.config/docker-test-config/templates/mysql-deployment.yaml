@@ -16,7 +16,7 @@ spec:
       - name: mysql
         image: docker.io/library/mysql:5.7.44
         ports:
-        - containerPort: 3306
+        - containerPort: {{ .Values.mysql_port }}
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: test-mount

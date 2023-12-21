@@ -9,7 +9,7 @@ spec:
   ports:
   - name: service-port
     port: {{ .Values.test_service_public_port }}
-    targetPort: 8080
+    targetPort: {{ .Values.test_service_port }}
     protocol: TCP
   selector:
     app: test-service

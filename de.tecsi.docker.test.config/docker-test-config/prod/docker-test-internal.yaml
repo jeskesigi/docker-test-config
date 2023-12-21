@@ -1,0 +1,5 @@
+docker-internal:
+  config-test:
+    value: 200
+  config-kubernetes:
+    value: this is from prod stage

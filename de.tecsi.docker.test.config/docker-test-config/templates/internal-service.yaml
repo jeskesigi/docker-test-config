@@ -8,7 +8,7 @@ spec:
   type: ClusterIP
   ports:
   - name: internal-port
-    port: 8081
+    port: {{ .Values.test_internal_port }}
     protocol: TCP
   selector:
     app: test-internal

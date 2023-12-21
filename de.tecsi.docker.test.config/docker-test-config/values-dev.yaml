@@ -1,9 +1,11 @@
-test_service_public_port: 8000
+env: dev
 
-test_service_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
-test_internal_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
-
-test_internal_test_value: 100
-test_internal_kubernetes_value: "this is DEV - loaded dynamically"
-
+# global
 persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/test-mount"
+
+# test-service
+test_service_public_port: 8000
+test_service_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
+
+# test-internal
+test_internal_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"

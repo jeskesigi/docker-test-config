@@ -1,0 +1,10 @@
+docker-test-service:
+  db:
+    url: jdbc:mysql://mysql:{{ .Values.mysql_port }}/docker-test-service?serverTimezone=UTC
+    default_schema: docker-test-service
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+  internal-api:
+    endpoint: http://test-internal:{{ .Values.test_internal_port }}
+  external-api:
+    endpoint: http://test-external:{{ .Values.test_external_port }}

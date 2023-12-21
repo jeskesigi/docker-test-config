@@ -22,7 +22,7 @@ spec:
         image: docker.io/jeskesigi/docker-test-service:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.test_service_port }}
         env:
         - name: JAVA_OPTS
           value: {{ .Values.test_service_java_opts }}
@@ -50,11 +50,11 @@ spec:
           periodSeconds: 1
           httpGet:
             path: /actuator/health
-            port: 8080          
+            port: {{ .Values.test_service_port }}          
         livenessProbe:
           httpGet:
             path: /actuator/health
-            port: 8080
+            port: {{ .Values.test_service_port }}
       volumes:
       - name: test-mount
         persistentVolumeClaim:

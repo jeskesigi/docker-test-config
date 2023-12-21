@@ -1,6 +1,11 @@
-test_service_public_port: 9000
+env: prod
 
-test_internal_test_value: 200
-test_internal_kubernetes_value: "this is PROD - loaded dynamically"
-
+# global
 persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/prod-mount"
+
+# test-service
+test_service_public_port: 9000
+test_service_java_opts: ""
+
+# test-internal
+test_internal_java_opts: ""
