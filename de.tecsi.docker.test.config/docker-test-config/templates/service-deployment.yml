@@ -12,6 +12,7 @@ spec:
       labels:
         app: test-service
     spec:
+      serviceAccountName: docker-test-account
       initContainers:
         - name: check-mysql
           image: busybox
