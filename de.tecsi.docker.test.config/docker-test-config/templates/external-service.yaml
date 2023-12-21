@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: test-external
-  namespace: docker-test-dev
 spec:
   type: ExternalName
   # see C:\Windows\System32\drivers\etc\hosts
