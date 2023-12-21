@@ -1,1 +1,3 @@
 test_service_public_port: 9000
+
+persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/prod-mount"

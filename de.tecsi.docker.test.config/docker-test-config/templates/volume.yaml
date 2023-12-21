@@ -9,5 +9,5 @@ spec:
   accessModes:
   - ReadWriteMany
   hostPath:
-    path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/test-mount"
+    path: {{ .Values.persistent_volume_path }}
   persistentVolumeReclaimPolicy: Retain
