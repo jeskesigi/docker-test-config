@@ -5,5 +5,9 @@ metadata:
 data:
   docker-internal.config-kubernetes.value: {{ .Values.test_internal_kubernetes_value }}
   
-  docker-test-internal.properties: |
+  application.properties: |
     docker-internal.config-test.value=123
+
+  docker-test-internal.properties: |
+    docker-internal.config-test.value=100
+
