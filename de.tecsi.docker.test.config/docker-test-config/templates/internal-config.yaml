@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: test-internal-config
 data:
-  docker-internal.config-kubernetes.value: "hugo was here."
+  docker-internal.config-kubernetes.value: {{ .Values.test_internal_kubernetes_value }}
   
   docker-test-internal.properties: |
     docker-internal.config-test.value=123

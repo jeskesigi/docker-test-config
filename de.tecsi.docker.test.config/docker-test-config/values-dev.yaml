@@ -3,4 +3,6 @@ test_service_public_port: 8000
 test_service_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
 test_internal_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
 
+test_internal_kubernetes_value: "this is DEV - loaded dynamically"
+
 persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/test-mount"
