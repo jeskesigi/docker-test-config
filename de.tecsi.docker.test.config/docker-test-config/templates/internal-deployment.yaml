@@ -20,6 +20,8 @@ spec:
         env:
         - name: JAVA_OPTS
           value: {{ .Values.test_internal_java_opts }}
+        - name: SPRING_PROFILES_ACTIVE
+          value: "kubernetes"
         ports:
         - containerPort: 8081
         volumeMounts:

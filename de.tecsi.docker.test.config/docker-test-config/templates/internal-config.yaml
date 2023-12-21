@@ -4,12 +4,5 @@ metadata:
   name: test-internal-config
 data:
   application.properties: |
-    spring.config.import=kubernetes:
-    spring.cloud.kubernetes.config.name=test-internal-config
-    spring.cloud.kubernetes.config.fail-fast=true
-    spring.cloud.kubernetes.reload.enabled=true
-    # refresh, restart_context, or shutdown
-    # spring.cloud.kubernetes.reload.strategy=refresh
-
     docker-internal.config-test.value={{ .Values.test_internal_test_value }}
     docker-internal.config-kubernetes.value: {{ .Values.test_internal_kubernetes_value }}
