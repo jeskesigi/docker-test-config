@@ -27,7 +27,7 @@ roleRef:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: docker-test-cluster-role-binding
+  name: {{ .Release.Namespace }}-docker-test-cluster-role-binding
   labels:
     dummy: test
 subjects:
