@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: test-service-config
 data:
-  docker-test-service.properties: |
+  application.properties: |
     docker-test-service.db.url=jdbc:mysql://mysql:3306/docker-test-service?serverTimezone=UTC
     docker-test-service.db.default_schema=docker-test-service
     docker-test-service.db.username=${MYSQL_USERNAME}
