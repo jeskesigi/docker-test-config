@@ -16,7 +16,7 @@ spec:
       containers:
       - name: internal
         image: docker.io/jeskesigi/docker-test-internal:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         env:
         - name: JAVA_OPTS
           value: {{ .Values.test_internal_java_opts }}
