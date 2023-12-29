@@ -10,7 +10,7 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /test-data
+        value: /*
     backendRefs:
     - name: test-service
       port: 8080
