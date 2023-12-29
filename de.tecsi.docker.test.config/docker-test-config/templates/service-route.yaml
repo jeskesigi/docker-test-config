@@ -4,7 +4,7 @@ metadata:
   name: test-service-route
 spec:
   hosts:
-  - "localhost"
+  - "*"
   gateways:
   - test-service-gateway
   http:
