@@ -7,6 +7,7 @@ docker-test-service:
   internal-api:
     endpoint: http://test-internal:{{ .Values.test_internal_port }}
   external-api:
-    endpoint: http://test-external:{{ .Values.test_external_port }}
+    endpoint: http://msgn19818.hyperv.net:{{ .Values.test_external_port }}
+    # endpoint: http://test-external:{{ .Values.test_external_port }}    
   other:
     dummy: 12
