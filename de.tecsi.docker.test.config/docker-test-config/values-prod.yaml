@@ -4,8 +4,10 @@ env: prod
 persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/prod-mount"
 
 # test-service - use istio to expose service
-# test_service_public_port: 9000
 test_service_java_opts: ""
 
 # test-internal
 test_internal_java_opts: ""
+
+# use istio to expose service
+istio_gateway_port: 9000

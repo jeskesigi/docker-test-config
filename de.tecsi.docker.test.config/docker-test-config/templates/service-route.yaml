@@ -1,0 +1,18 @@
+kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: test-service-route
+spec:
+  hosts:
+  - "localhost"
+  gateways:
+  - test-service-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /test-service
+    route:
+    - destination:
+        port:
+          number: {{ .Values.test_service_port }}
+        host: test-service
