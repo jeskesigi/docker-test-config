@@ -6,7 +6,7 @@ spec:
   hosts:
   - msgn19818.hyperv.net
   ports:
-  - number: 8082
+  - number: {{ .Values.test_external_port }}
     name: http
     protocol: HTTP
   resolution: DNS
