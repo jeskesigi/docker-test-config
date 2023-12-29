@@ -3,8 +3,8 @@ env: dev
 # global
 persistent_volume_path: "/run/desktop/mnt/host/c/Projekte/docker/repository/docker-test/de.tecsi.docker.test/kubernetes/test-mount"
 
-# test-service
-test_service_public_port: 8000
+# test-service - use istio to expose service
+# test_service_public_port: 8000
 test_service_java_opts: "-agentlib:jdwp=transport=dt_socket,address=*:50505,server=y,suspend=n"
 
 # test-internal
