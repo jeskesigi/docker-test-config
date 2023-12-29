@@ -6,9 +6,5 @@ spec:
   gatewayClassName: istio
   listeners:
   - name: http
-    hostname: "localhost"
     port: 8000
     protocol: HTTP
-    allowedRoutes:
-      namespaces:
-        from: Same
