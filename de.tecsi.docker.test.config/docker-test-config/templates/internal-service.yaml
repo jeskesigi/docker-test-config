@@ -7,7 +7,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: internal-port
+  - name: http-internal-port
     port: {{ .Values.test_internal_port }}
     protocol: TCP
   selector:

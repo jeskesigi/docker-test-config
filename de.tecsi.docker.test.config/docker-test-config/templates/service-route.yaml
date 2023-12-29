@@ -1,18 +1,16 @@
-kind: VirtualService
-apiVersion: networking.istio.io/v1alpha3
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: test-service-route
 spec:
-  hosts:
-  - "*"
-  gateways:
-  - test-service-gateway
-  http:
-  - match:
-    - uri:
-        prefix: /test-service
-    route:
-    - destination:
-        port:
-          number: {{ .Values.test_service_port }}
-        host: test-service
+  parentRefs:
+  - name: test-service-gateway
+  hostnames: ["localhost"]
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /test-service
+    backendRefs:
+    - name: test-service
+      port: 8080
