@@ -6,5 +6,5 @@ spec:
   gatewayClassName: istio
   listeners:
   - name: http
-    port: 8000
+    port: {{ .Values.istio_gateway_port }}
     protocol: HTTP

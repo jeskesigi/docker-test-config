@@ -5,7 +5,6 @@ metadata:
 spec:
   parentRefs:
   - name: test-service-gateway
-  hostnames: ["localhost"]
   rules:
   - matches:
     - path:
@@ -13,4 +12,4 @@ spec:
         value: /
     backendRefs:
     - name: test-service
-      port: 8080
+      port: {{ .Values.test_service_port }}
