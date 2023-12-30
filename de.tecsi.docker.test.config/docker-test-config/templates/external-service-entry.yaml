@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
-  name: external-service
+  name: external-service-entry
 spec:
   hosts:
-  - msgn19818.hyperv.net
+  - {{ .Values.test_external_host }}
   ports:
   - number: {{ .Values.test_external_port }}
     name: http

@@ -1,13 +1,12 @@
 docker-test-service:
   db:
-    url: jdbc:mysql://mysql:{{ .Values.mysql_port }}/docker-test-service?serverTimezone=UTC
+    url: jdbc:mysql://{{ .Values.mysql_host }}:{{ .Values.mysql_port }}/docker-test-service?serverTimezone=UTC
     default_schema: docker-test-service
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
   internal-api:
-    endpoint: http://test-internal:{{ .Values.test_internal_port }}
+    endpoint: http://{{ .Values.test_internal_host }}:{{ .Values.test_internal_port }}
   external-api:
-    endpoint: http://msgn19818.hyperv.net:{{ .Values.test_external_port }}
-    # endpoint: http://test-external:{{ .Values.test_external_port }}    
+    endpoint: http://{{ .Values.test_external_host }}:{{ .Values.test_external_port }}
   other:
     dummy: 12

@@ -1,5 +1,16 @@
-# ports
+# ports in cluster
+
+mysql_host: mysql
 mysql_port: 3306
+
+test_service_host: test-service
 test_service_port: 8080
+
+test_internal_host: test-internal
 test_internal_port: 8081
+
+# external service
+# see C:\Windows\System32\drivers\etc\hosts
+
+test_external_host: msgn19818.hyperv.net
 test_external_port: 8082
