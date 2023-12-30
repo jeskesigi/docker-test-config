@@ -46,8 +46,8 @@ spec:
           name: test-mount
           subPath: logs
         readinessProbe:
-          initialDelaySeconds: 5
-          periodSeconds: 1
+          initialDelaySeconds: 30
+          periodSeconds: 120
           httpGet:
             path: /actuator/health
             port: {{ .Values.test_service_port }}          
